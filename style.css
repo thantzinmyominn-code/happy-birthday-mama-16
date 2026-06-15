@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    overflow-x:hidden;
+    padding:20px;
+}
+
+.hidden{
+    display:none;
+}
+
+#welcome{
+    text-align:center;
+}
+
+.title{
+    font-size:3rem;
+    color:white;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    color:white;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+button{
+    border:none;
+    padding:12px 25px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#startBtn{
+    background:white;
+    color:#ff4d6d;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:700px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+.content{
+    padding:25px;
+}
+
+.content h2{
+    color:#ff4d6d;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.7;
+    font-size:1.1rem;
+}
+
+.buttons{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+    justify-content:center;
+}
+
+.buttons button{
+    background:#ff4d6d;
+    color:white;
+}
+
+#finalSection{
+    text-align:center;
+    color:white;
+    max-width:800px;
+}
+
+#finalSection h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+#finalSection p{
+    font-size:1.3rem;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:floatUp 6s linear forwards;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:768px){
+
+    .title{
+        font-size:2rem;
+    }
+
+    .card img{
+        height:300px;
+    }
+
+    .content p{
+        font-size:1rem;
+    }
+}
